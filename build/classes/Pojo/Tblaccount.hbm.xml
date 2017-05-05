@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 14, 2017 6:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Tblaccount" table="tblaccount" catalog="1412363_database" optimistic-lock="version">
+        <id name="userName" type="string">
+            <column name="UserName" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="pass" type="string">
+            <column name="Pass" length="500" />
+        </property>
+        <property name="isTheFisrtTime" type="java.lang.Integer">
+            <column name="IsTheFisrtTime" />
+        </property>
+        <property name="isSv" type="java.lang.Integer">
+            <column name="IsSV" />
+        </property>
+    </class>
+</hibernate-mapping>

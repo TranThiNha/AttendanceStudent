@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 14, 2017 6:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.TblestudentSubject" table="tblestudent_subject" catalog="1412363_database" optimistic-lock="version">
+        <composite-id name="id" class="Pojo.TblestudentSubjectId">
+            <key-property name="maSv" type="string">
+                <column name="MaSV" length="10" />
+            </key-property>
+            <key-property name="maMh" type="string">
+                <column name="MaMH" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="tblstudent" class="Pojo.Tblstudent" update="false" insert="false" fetch="select">
+            <column name="MaSV" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblsubject" class="Pojo.Tblsubject" update="false" insert="false" fetch="select">
+            <column name="MaMH" length="10" not-null="true" />
+        </many-to-one>
+        <property name="note" type="string">
+            <column name="note" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 14, 2017 6:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Tblministry" table="tblministry" catalog="1412363_database" optimistic-lock="version">
+        <id name="maGv" type="string">
+            <column name="MaGV" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenGv" type="string">
+            <column name="TenGV" length="50" />
+        </property>
+        <property name="userName" type="string">
+            <column name="UserName" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

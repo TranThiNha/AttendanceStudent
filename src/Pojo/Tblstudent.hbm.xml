@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 14, 2017 6:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Tblstudent" table="tblstudent" catalog="1412363_database" optimistic-lock="version">
+        <id name="maSv" type="string">
+            <column name="MaSV" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenSv" type="string">
+            <column name="TenSV" length="50" />
+        </property>
+        <property name="userName" type="string">
+            <column name="UserName" length="30" />
+        </property>
+        <property name="tenLop" type="string">
+            <column name="TenLop" length="30" />
+        </property>
+        <property name="gioiTinh" type="string">
+            <column name="GioiTinh" length="10" />
+        </property>
+        <property name="ngaySinh" type="date">
+            <column name="NgaySinh" length="10" />
+        </property>
+        <property name="diaChi" type="string">
+            <column name="DiaChi" length="200" />
+        </property>
+        <set name="tblestudentSubjects" table="tblestudent_subject" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MaSV" length="10" not-null="true" />
+            </key>
+            <one-to-many class="Pojo.TblestudentSubject" />
+        </set>
+    </class>
+</hibernate-mapping>

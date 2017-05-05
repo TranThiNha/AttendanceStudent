@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 14, 2017 6:01:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Tbltimetable" table="tbltimetable" catalog="1412363_database" optimistic-lock="version">
+        <id name="maTkb" type="string">
+            <column name="MaTKB" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="monHoc" type="string">
+            <column name="MonHoc" length="10" />
+        </property>
+        <property name="ngayBd" type="date">
+            <column name="NgayBD" length="10" />
+        </property>
+        <property name="ngayKt" type="date">
+            <column name="NgayKT" length="10" />
+        </property>
+        <property name="soTuan" type="java.lang.Integer">
+            <column name="SoTuan" />
+        </property>
+        <property name="thu" type="string">
+            <column name="Thu" length="10" />
+        </property>
+        <property name="gioBd" type="time">
+            <column name="GioBD" length="8" />
+        </property>
+        <property name="gioKt" type="time">
+            <column name="GioKT" length="8" />
+        </property>
+        <property name="phongHoc" type="string">
+            <column name="PhongHoc" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
